@@ -20,7 +20,8 @@
   - ### **Back-end, Database**
     - NodeJS (ExpressJS).
     - MongoDB (mongooseJS).
-    - Hosting: Heroku server
+    - Hosting: vultr server
+    - domain: Tenten
     - Cloud Server: Atlas MongoDB, Cloudinary.
     - API Documents: Swagger.
   - ### **Front-end**
