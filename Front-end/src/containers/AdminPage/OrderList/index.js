@@ -1,14 +1,10 @@
 
-
-
-
-
 import { Button, message, Modal, Radio, Spin, Table, Tooltip } from 'antd';
 import adminApi from 'apis/adminApi';
 import helpers from 'helpers';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import OrderDetail from './OrderDetail';
 
 
 function generateFilterOrder() {
@@ -22,6 +18,10 @@ function generateFilterOrder() {
 function OrderList() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [orderDetails, setOrderDetails] = useState({
+    isOpen: false,
+    orderId: '',
+  });
 
   //
   
@@ -78,38 +78,21 @@ function OrderList() {
       dataIndex: 'owner',
     },
     
-    {
-      title: 'Họ tên',
-      key: 'fullName',
-      dataIndex: 'fullName',
-    },
-    {
-      title: 'Mã Sản Phẩm',
-      key: 'code',
-      dataIndex: 'code',
-      render: (code, data) => (
-        <a target="blank" href={`/product/${data._id}`}>
-          {code}
-        </a>
-      ),
-    },
-
-    {
-      title: 'Hình Ảnh Mặt Hàng',
-      key: 'avt',
-      dataIndex: 'avt',
-      render: (avt) => (
-
-        <img className="max-w-100 max-h-100" src={avt} alt="Ảnh Đơn Hàng" />
-
-      ),
-    },
+   
     
     {
       title: 'Mã đơn hàng',
       key: 'orderCode',
       dataIndex: 'orderCode',
-      render: (v) => <a>{v}</a>,
+      render: (_v, records) =>(
+        <Button
+          type="link"
+          onClick={() =>
+            setOrderDetails({ isOpen: true, orderId: records.orderId })
+          }>
+          <b>{_v}</b>
+        </Button>
+      ),
     },
     {
       title: 'Ngày đặt',
@@ -223,8 +206,15 @@ function OrderList() {
           pagination={{ showLessItems: true, position: ['bottomCenter'] }}
         />
       )}
+      {orderDetails.isOpen && (
+        <OrderDetail
+          orderId={orderDetails.orderId}
+          onClose={() => setOrderDetails({ isOpen: false })}
+        />
+      )}
     </>
   );
+
 }
 
 export default OrderList;

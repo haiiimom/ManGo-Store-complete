@@ -20,11 +20,11 @@
     "swagger-ui-express": "^4.1.4"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "dev": "set NODE_ENV=development&&nodemon --inspect index.js",
     "test": "set NODE_ENV=production&&nodemon --inspect index.js"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.20"
   }
 }

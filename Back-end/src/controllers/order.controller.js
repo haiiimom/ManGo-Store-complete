@@ -24,6 +24,7 @@ const getOrderDetails = async (req, res, next) => {
   try {
     const { orderId } = req.query;
     const order = await OrderModel.findById(orderId).select('-_id -owner');
+    console.log('demo tesst - ' + orderId);
     if (order) {
       const { deliveryAdd } = order;
       const { name, phone, address } = deliveryAdd;
