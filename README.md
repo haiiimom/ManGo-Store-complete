@@ -1,7 +1,7 @@
   <h1 align="center"><b>ManGo STORE WEBSITE</b></h1>
 
 - ## ManGo Store là một website về cửa hàng thiết bị điện tử.
-- ## Link demo: 
+- ## Link demo: http://45.32.101.29/
 
 - ## ✨ **Tính năng**
 
@@ -20,7 +20,8 @@
   - ### **Back-end, Database**
     - NodeJS (ExpressJS).
     - MongoDB (mongooseJS).
-    - Hosting: Heroku server
+    - Hosting: vultr server
+    - domain: Tenten
     - Cloud Server: Atlas MongoDB, Cloudinary.
     - API Documents: Swagger.
   - ### **Front-end**
