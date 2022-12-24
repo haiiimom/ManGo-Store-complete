@@ -33,8 +33,6 @@
   - ### **Tool Team Work**
     - Git, Github.
     - Eslint, EditorConfig, Jsconfig.
-    - Trello.
-    - Slack.
     - IDE: Visual Studio Code.
 
 - ## 📦 **Cài đặt node_module trước khi chạy**
