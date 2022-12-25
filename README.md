@@ -9,7 +9,7 @@
   - Tìm kiếm, lọc sản phẩm theo yêu cầu người dùng.
   - Hiển thị chi tiết sản phẩm và đề xuất các sản phẩm liên quan.
   - Cho phép người dùng thêm, bớt sản phẩm trong giỏ hàng.
-  - Đặt hàng (Thanh toán online với VNPay).
+  - Đặt hàng 
   - Đăng ký, đăng nhập.
   - Quản lý tài khoản người dùng, tính toán chương trình khuyến mãi.
   - Lưu lịch sử mua hàng, đề xuất sản phẩm liên quan.
