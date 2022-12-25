@@ -9,7 +9,6 @@
   - Tìm kiếm, lọc sản phẩm theo yêu cầu người dùng.
   - Hiển thị chi tiết sản phẩm và đề xuất các sản phẩm liên quan.
   - Cho phép người dùng thêm, bớt sản phẩm trong giỏ hàng.
-  - So sánh 2 sản phẩm.
   - Đặt hàng (Thanh toán online với VNPay).
   - Đăng ký, đăng nhập.
   - Quản lý tài khoản người dùng, tính toán chương trình khuyến mãi.
