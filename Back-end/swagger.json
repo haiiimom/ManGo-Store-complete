@@ -1,7 +1,9 @@
+
+
 {
   "swagger": "2.0",
   "info": {
-    "description": "API dành cho trang web TTB Store",
+    "description": "API dành cho trang web ManGo Store",
     "version": "1.0.0",
     "title": "Mango Store API",
     "contact": {

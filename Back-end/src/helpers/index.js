@@ -17,6 +17,10 @@ const CameraModel = require('../models/product.models/camera.models/camera.model
 const WebcamModel = require('../models/product.models/camera.models/webcam.model');
 const AddressModel = require('../models/address.model');
 
+
+//là nơi chứa các hàm tính toán dùng ở nhiều nơi
+
+
 //fn: tạo mã xác thực
 const generateVerifyCode = (numberOfDigits) => {
   //random một số từ 1 -> 10^numberOfDigits
@@ -102,6 +106,7 @@ const typeOfProduct = (str = '') => {
 };
 
 // fn: chuyển object chứa regex dạng string, ex: {$regex: '/^apple$/i'} => {$regex: /^apple$/i}
+// là chuyển định dạng các chuổi string
 const convertObjectContainsRegex = (obj) => {
   const newObj = { ...obj };
   if (newObj.hasOwnProperty('$or')) {
