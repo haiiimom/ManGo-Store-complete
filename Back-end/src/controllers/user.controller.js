@@ -3,19 +3,19 @@ const UserModel = require('../models/account.models/user.model');
 // api: get user
 const getUser = async (req, res, next) => {
   try {
-    //if check authentication wrong then return error
+    //nếu kiểm tra xác thực sai thì trả về lỗi
     if (!res.locals.isAuth)
       return res
         .status(400)
         .json({ message: 'Không thể lấy thông tin user', error });
-    //else get information user -> send client
+    // lấy thông tin người dùng -> gửi khách hàng
     const { _id } = req.user;
     const infoUser = await UserModel.findOne({ accountId: _id }).populate({
       path: 'accountId',
       select: 'email -_id',
     });
 
-    //send information user except _id
+    //gửi thông tin người dùng ngoại trừ _id
     const infoUserSend = {
       ...infoUser._doc,
       email: infoUser.accountId.email,

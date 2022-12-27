@@ -19,7 +19,7 @@ const postComment = async (req, res, next) => {
   try {
     const data = req.body;
     const { productId, rate } = data;
-    // Nếu có rate thì cập nhật lại rate trong product
+    // Nếu có sao thì cập nhật lại sao trong product
     if (parseInt(rate) !== -1) {
       const product = await ProductModel.findById(productId);
       if (product) {

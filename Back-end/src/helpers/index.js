@@ -188,10 +188,10 @@ const convertAddress = async (address) => {
 };
 
 module.exports = {
-  generateVerifyCode,
-  isVerifyEmail,
-  convertProductType,
-  typeOfProduct,
-  convertObjectContainsRegex,
-  convertAddress,
+  generateVerifyCode,//tạo mã xác minh
+  isVerifyEmail,//mã xác thực email
+  convertProductType,//chuyển đổi loại sản phẩm
+  typeOfProduct,// loại sản phẩm
+  convertObjectContainsRegex,//chuyển đổi Đối tượng Chứa Regex
+  convertAddress,// chuyển đổi địa chỉ
 };

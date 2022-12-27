@@ -23,7 +23,7 @@ const UserModel = require('../models/account.models/user.model');
 const AccountModel = require('../models/account.models/account.model');
 const OrderModel = require('../models/order.model');
 
-// fn: upload product avatar to cloudinary
+// fn: upload  ảnh đơn hàng lên cloudinary
 const uploadProductAvt = async (avtFile, productCode) => {
   try {
     const result = await cloudinary.uploader.upload(avtFile, {
@@ -36,7 +36,7 @@ const uploadProductAvt = async (avtFile, productCode) => {
   }
 };
 
-// fn: upload product catalogs to cloudinary
+// fn: upload ảnh danh mục lên cloudinary
 const uploadProductCatalogs = async (catalogs, productCode) => {
   try {
     const urlCatalogs = [];
@@ -52,7 +52,7 @@ const uploadProductCatalogs = async (catalogs, productCode) => {
   }
 };
 
-// fn: upload product desc photo to cloudinary
+// fn: tải ảnh mô tả sản phẩm lên cloudinary
 const uploadDescProductPhoto = async (desc, productCode) => {
   try {
     let result = [];
@@ -139,7 +139,7 @@ const addProduct = async (req, res, next) => {
     if (isExist) {
       return res.status(400).json({ message: 'Mã sản phẩm đã tồn tại !' });
     }
-    // upload product avatar to cloudinary
+    // tải hình đại diện sản phẩm lên cloudinary
     const avtUrl = await uploadProductAvt(avatar, code);
 
     // upload ảnh khác của sản phẩm
@@ -279,7 +279,7 @@ const getCustomerList = async (req, res, next) => {
     });
     //kiểm tra DB
     console.log(list);
-    // 
+    //
     return res.status(200).json({ list });
   } catch (error) {
     console.error(error);

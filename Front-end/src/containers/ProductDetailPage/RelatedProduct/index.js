@@ -8,6 +8,8 @@ function RelatedProduct(props) {
   const { id, type, brand, title, span } = props;
   const [productList, setProductList] = useState([]);
 
+  //sản phẩm tương tự
+
   // Lấy ds sản phẩm
   useEffect(() => {
     let isSubscribe = true;

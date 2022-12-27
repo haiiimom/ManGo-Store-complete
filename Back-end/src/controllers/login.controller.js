@@ -166,7 +166,7 @@ const postRefreshToken = async (req, res, next) => {
     const { userID, keepLogin } = decoded.sub;
     //create new access_token -> set cookie
     const newAccessToken = await jwtConfig.encodedToken(
-      process.env.JWT_SECRET_KEY, /// hai cái nè 
+      process.env.JWT_SECRET_KEY, /// hai cái nè
       { userID },
     );
     //cookies expires if no keep Login then 0

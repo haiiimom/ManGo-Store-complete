@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './index.scss';
 
+//thông số kỹ thuật
+
 // fn: lấy danh sách thông số
 function listSpecification(data) {
   let result = [];
